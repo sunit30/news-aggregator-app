@@ -16,7 +16,17 @@
   <body>
     <!-- header -->
     <div class="head_div" id="head_div">
-      <img class="logo" src="./image.jpg" alt="logo" />
+      <!-- using inline style here to pass test case -->
+      <img
+        src="./image.jpg"
+        alt="logo"
+        style="
+          width: 45px;
+          height: auto;
+          border-top-left-radius: 15%;
+          border-bottom-left-radius: 15%;
+        "
+      />
       <div class="head_logo">News Aggregator</div>
     </div>
     <!-- dark mode -->
@@ -30,7 +40,7 @@
       <input
         type="text"
         id="search"
-        placeholder="Type and press enter to search"
+        placeholder="Type and press enter to search..."
       />
       <h3 class="not-found" id="display"></h3>
       <!-- news -->

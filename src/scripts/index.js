@@ -22,13 +22,13 @@ async function load_func() {
     document.getElementById("news-articles").innerHTML = ``;
   } else {
     data.articles.forEach((item, i) => {
-      output += `<li class="article card shadow" id="news_card">`;
+      output += `<li class="card shadow article" id="news_card">`;
       output += `<img src=${data.articles[i].urlToImage} class="article-img card-img-top" alt="news_image"/>`;
       output += `<a href=${data.articles[i].url} class="article-link" target="_blank">`;
 
       output += `<div class="card-body" id="card_main">`;
-      output += `<h2 class="article-title card-title">${data.articles[i].title}</h2>`;
-      output += `<p class="article-description card-text">${data.articles[i].description}</p>`;
+      output += `<h2 class="card-title article-title">${data.articles[i].title}</h2>`;
+      output += `<p class="card-text article-description">${data.articles[i].description}</p>`;
       output += `<p class="card-text" id="text_author"><span class="article-author"> - ${data.articles[i].author}</span></p>`;
       output += `</div>`;
 
