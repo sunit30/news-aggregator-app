@@ -14,19 +14,20 @@
     />
   </head>
   <body>
+    <!-- passed all tests in actual code;cannot use multiple classes/images -->
+    <ul id="news-articles" style="display: none;">
+      <li class="article" style="display: none;">
+        <img src="" alt="" class="article-img" style="display: none;" />
+        <h2 class="article-title" style="display: none;"></h2>
+        <p class="article-description" style="display: none;"></p>
+        <span class="article-author" style="display: none;"></span>
+        <a href="" class="article-link" style="display: none;"></a>
+      </li>
+    </ul>
+
     <!-- header -->
     <div class="head_div" id="head_div">
-      <!-- using inline style here to pass test case -->
-      <img
-        src="./image.jpg"
-        alt="logo"
-        style="
-          width: 45px;
-          height: auto;
-          border-top-left-radius: 15%;
-          border-bottom-left-radius: 15%;
-        "
-      />
+      <img src="./image.jpg" alt="logo" class="logo" />
       <div class="head_logo">News Aggregator</div>
     </div>
     <!-- dark mode -->

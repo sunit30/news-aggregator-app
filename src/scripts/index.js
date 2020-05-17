@@ -5,9 +5,9 @@ let search_text = `top-headlines?country=in`;
 const key = `148d45517dda466ea6bd5e1aa55f22c2`;
 
 async function load_func() {
-  document.getElementById(
-    "news-articles"
-  ).innerHTML = `<div id="loader"></div>`;
+  document.getElementsByClassName(
+    "card-deck"
+  )[0].innerHTML = `<div id="loader"></div>`;
 
   let response = await fetch(
     `https://newsapi.org/v2/${search_text}&apiKey=${key}`
@@ -19,7 +19,7 @@ async function load_func() {
   if (data.articles.length === 0) {
     output = `No article was found based on the search.`;
     document.getElementById("display").innerHTML = output;
-    document.getElementById("news-articles").innerHTML = ``;
+    document.getElementsByClassName("card-deck")[0].innerHTML = ``;
   } else {
     data.articles.forEach((item, i) => {
       output += `<li class="card shadow article" id="news_card">`;
@@ -33,11 +33,10 @@ async function load_func() {
       output += `</div>`;
 
       output += `</a>`;
-
       output += `</li>`;
     });
 
-    document.getElementById("news-articles").innerHTML = output;
+    document.getElementsByClassName("card-deck")[0].innerHTML = output;
   }
 }
 

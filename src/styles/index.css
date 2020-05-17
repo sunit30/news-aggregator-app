@@ -95,6 +95,12 @@ li {
   justify-content: center;
   cursor: pointer;
 }
+.logo {
+  width: 45px;
+  height: auto;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%;
+}
 .head_logo {
   width: max-content;
   font-size: 1.7rem;
