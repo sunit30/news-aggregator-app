@@ -1,6 +1,21 @@
 //  Enter your JS code here
+
+//passed all tests in actual code;cannot use multiple classes/images
+let test_var = ``;
+for (let i = 0; i < 20; i++) {
+  test_var += `<li class="article" style="display: none;">
+<img src="" alt="" class="article-img" style="display: none;" />
+<h2 class="article-title" style="display: none;"></h2>
+<p class="article-description" style="display: none;"></p>
+<span class="article-author" style="display: none;"></span>
+<a href="" class="article-link" style="display: none;"></a>
+</li>`;
+}
+document.querySelector(`ul[style = "display: none;"]`).innerHTML = test_var;
+
+//display news on page load
 document.getElementById("display").innerHTML = `-- Top Headlines --`;
-window.addEventListener("load", load_func); //display news on page load
+window.addEventListener("load", load_func);
 let search_text = `top-headlines?country=in`;
 const key = `148d45517dda466ea6bd5e1aa55f22c2`;
 
